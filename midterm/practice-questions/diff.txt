@@ -1,0 +1,3 @@
+3 - diff3 will break if a cin fails to beign with, so it will never clear the bit and keepgoing
+so if you put a string, all input stops, where as 3 runs on a true while loop, so even if the read fails
+we keep reading input
