@@ -7,3 +7,8 @@ using namespace std;
 // class methods can be written in either the interface or the implementation, however it is advised that you use the implementation file
 // for better style
 
+// BENEFITS OF DEFFAULT CTORS
+//  - bound checking
+//  - overloading
+//  - default parameters (instead of grabage values)
+
