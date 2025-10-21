@@ -39,10 +39,11 @@ export class Student {
 module Student;
 
 Student::Student(int assns, int mt, int final):
-    assns{assns}, mt{mt}, final{final}{};
+    assns{asnns}, mt{mt}, final{final}{};
 
 int Student::grade(const Student& s){
-    int grade = (assns + mt + final) / 3;
+    int grade = (assns + mt + final) / 3; // this is wrong, i am taking a student reference but i am referencng this liek its this->
+    // so either remove the parameter or add the s.assns etc...
     return grade;
 }
 

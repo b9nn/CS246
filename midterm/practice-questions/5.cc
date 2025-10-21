@@ -6,5 +6,7 @@ int main() {
     string s;
     while (cin >> s){
         cout << "Word [" << i << "]: "<< s << endl; // what does this look like for "a     bc  d a e"??
+        i++;
     }
 }
+

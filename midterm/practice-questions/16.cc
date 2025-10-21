@@ -5,7 +5,7 @@
 using namespace std;
 
 // what is wrong with this implementation of a grade method?
-int Student::grade(const Student& s){
+int Student::grade(const Student& s) const {
     int grade = (assns + mt + final) / 3;
     return grade;
 }
