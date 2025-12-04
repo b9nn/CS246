@@ -1,0 +1,41 @@
+OBJECT CREATION STEPS (applys to stack and heap)
+- space is allocated
+- fields are constructed
+    - default constructor is ran on every field
+- constructor body runs
+
+must use MIL if you're initializing an object with:
+- const or ref
+- objec as fields without default constructed
+
+
+MIL OVERRIDES FEILD CREATION
+
+struct Student{
+    const int id;
+    int assn, mt, final;
+    Student(int id, int a, int m, int f):
+        id{id}, assn{a}, mt{m}, final{f}{   // THIS IS THE MIL  // LEFT SIDE = RIGHT SIDE // ALLOWS CONSTS TO BE INIT
+
+        // NOW THAT FIELDS ARE INIT WE CAN RUN CHECKS
+
+        if (assn > 100) assn = 100;
+        //....
+    }
+}
+
+Student sam{12345678, 90, 85, 100}
+
+
+
+~~~~ EVERY CLASS YOU MAKE GETS: ~~~~
+
+default ctor (field-by-field initialization)
+    - lost when you define any constructor
+
+// THE BIG 5
+- copy constructor
+- copy assignment operator
+- destructor
+- move constructor
+- move assignment operator

@@ -1,0 +1,21 @@
+struct Student{
+    int assn, mt, final;
+    Student(int a, int m, int f): // deafault ctor
+        assn{a}, mt{m}, final{f}{}   // THIS IS THE MIL // ALLOWS CONSTS TO BE INIT
+
+    Student (const Student& other): // copy ctor
+        assn{other.assn}, mt{other.mt}, final{other.final}{}
+
+    Student& operator=(const Student& other){
+        assn = other.assn;
+        mt = other.mt;
+        final = other.final;
+        return *this;
+    }   
+
+};
+
+Student Ben{1, 2, 3};
+Student Billy = Ben;
+Student Alex;
+Alex = Billy; // Copy-Assn Operator

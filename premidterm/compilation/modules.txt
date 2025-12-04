@@ -1,0 +1,20 @@
+
+In C++ we split programs into modules
+- interfaces: type defs, and fn defs
+- implementation: full defns fpr all fns in interface
+
+declaration: assert existence
+    - void foo();
+
+definition: full signature + body
+    - void foo(){
+        **function body**
+      }
+
+
+interfaces start with:
+    export module ------
+
+implementation files start with:
+    module ---
+

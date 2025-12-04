@@ -1,0 +1,18 @@
+Compile seperately with g++20 -c _______.cc
+    -c arg says to compile this file only do not link or build executabl
+    returns an object file
+
+--- ORDER MATTERS as PER DEPENDENCY ---
+g++20 -c vec.cc
+g++20 -c vec-implementation ---> if you did this first you would get an error because it references unknown module
+g++20 -c main.cc ---> if you did this first you would get an error because it references unknown module
+
+now for linking, if you did the above properly
+g++20 vec.o vec-implementation.o main.o -c programs
+
+run executable with: ./prog
+
+no limit on declaration of any entity
+only one def permitted
+
+interfaces must be compiled before implementations
